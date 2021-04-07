@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+h1::after {
+    font-weight: bold;
+    color: blue;
+    content:'.';
+}
+
+
+h2, h3, h1{
+    padding: 2rem;
+    align-self: flex-start;
+    padding-left: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+h3{
+    padding-top: 3rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.section2_episodios h2{
+    margin-top: 2rem;
+    color: white;
+}
+
+
+.container{
+    background: #FFFFFF;
+    width: 100%;
+
+
+    display: grid;
+    gap:0.1em;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.container > header,
+.container > main,
+.container > footer{
+    grid-column: 1/4;
+}
+/* menu principal */
+a {
+    color: #222;
+    text-decoration: none;
+}
+ul, li {
+    list-style: outside none none;
+}
+header, #central-content {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+header p {
+    float: left;
+    padding: 0 0 0.2em;
+}
+header p#logo img {
+    margin: 1em;
+    height: 26px;
+    width: 26px;
+}
+.control-menu {
+    background-color: transparent;
+    background-position: center center;
+    display: block;
+    float: right;
+    margin: 1em;
+    height: 26px;
+    margin-right: 1.3em;
+    width: 26px;
+}
+.control-menu a span {
+    display: inline-block;
+    height: 26px;
+    text-indent: -9999px;
+    width: 26px;
+}
+.control-menu .close {
+    background-image: url("assets/close-menu.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none;
+}
+.control-menu .open {
+    background-image: url("assets/open-menu.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+ul.nav-items {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out 0s, background-color 2s ease 0s; /*El menú cambia su altura y su color de fondo mediante una transición suavizada al voover a su estado unicial*/
+}
+
+#navigation:target ul.nav-items {
+    margin-top: 20px;
+    background: #0000EC none repeat scroll 0 0;
+    height: 12em;
+    transition: height 0.4s ease-in-out 0s, background-color 0.9s ease 0s; /*El menú cambia su altura y su color de fondo mediante una transición suavizada al abrirse*/
+}
+
+
+/*Al hacer clic sobre el enlace que abre el menú éste desaparece*/
+
+.close { 
+   display:none;
+}
+        
+#navigation:target .open {
+      display: none;
+}
+
+/* Al hacer clic sobre el enlace que abre el menú aparece el enlace .close que previamente estaba oculto*/
+
+#navigation:target .close {
+        display: block;
+}
+  
+/*Estilos menu*/
+
+ul.nav-items li {
+    display: block;
+}
+
+ul.nav-items a {
+    color:white;
+    display: block;
+    height: 0.5em;
+    line-height: 0.5em;
+    margin: 0 1em;
+}
+
+
+
+.container > main{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.container > footer{
+    margin: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container > header{
+    background:white none repeat scroll 0 0;
+}
+
+h6{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-bottom: 1rem;
+    margin: 0.8rem;
+    padding: 0.1rem;
+    font-weight: 400;
+}
+
+
+.section2_episodios, 
+.section3_fotos,
+.section4_iconos{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section2_episodios{
+    align-items: center;
+}
+
+.parrafo{
+    padding-left: 26px;
+    margin-right: 26px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 22px;
+    justify-content: left;
+}
+
+.section2_episodios{
+    background-image: url("assets/fondo_1.svg");
+    background-repeat: no-repeat, repeat;
+}
+
+
+.section4_iconos{
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section4_iconos p{
+    padding: 1rem;
+    font-size:24px;
+    font-weight:600;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.section5_novedades{
+    background-image: url("assets/fondo2.svg");
+    background-repeat: no-repeat, repeat;
+}
+
+.boton_2{
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #060A24;
+    background-color:#00F3BB;
+  }
+  .boton_2:hover{
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    text-decoration: none;
+    color: white;
+  }
+
+  #boton{
+      margin: 26px;
+      width: 288PX;
+      height: 48px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section2_episodios iframe{
+    height:232px;
+    margin: 0.3rem;
+    padding: 0.2rem;
+    width: 80%;
+}
+
+
+
+.section3_fotos img{
+    width: 320px;
+    height: 243px;
+}
+
+#img_phone{
+    width: 360px;
+    height: 550px;
+    margin-left: 1rem;
+    margin-top: 3rem;
+}
+
+
+.section4_iconos img{
+    width: 104px;
+    height: 104px;
+    margin-top:2rem;
+}
+
+footer img{
+    width: 16px;
+    height: 16px;
+}
+
+.lanzador{
+    width:26px;
+    height:26px;
+    float: right;
+    padding: 0.2rem;
+    }
+
+
+/* animacion*/
+.lanzador:hover{
+background-image: url("assets/close.svg");
+}
+/* animacion*/
+
+#btn{
+display: none;
+}
+
+#btn:target{
+display: block;
+}
+
+/* desplegable*/
+ul{
+list-style: none;
+max-width: 100%;
+padding-top: 0.5rem;
+}
+
+a{
+text-decoration: none;
+}
+
+li a{
+background: #0000EC;
+color: #ececec;
+display: block;
+padding: 15px 20px;
+}
+/* end menu*/
