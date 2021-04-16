@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #FFF;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24;
+}
+
+header img{
+    height: 26px;
+    width: 26px;
+}
+
+a{
+    color: #060A24;
+    text-decoration: none;
+}
+
+header a {
+    color: white;
+}
+
+ul, li {
+    list-style: outside none none;
+}
+
+h1::after {
+    font-weight: bold;
+    color: blue;
+    content:'.';
+}
+
+h2, h3, h1, strong{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 42px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h2{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+h3{
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+h6{
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h2, .section1_encabezado{
+    display: flex;
+    justify-self: left;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+
+.section1_encabezado{
+    margin-top: 2em;
+}
+
+.section2_episodios h2{
+    color:white;
+    padding: 0.5em;
+    margin: 0.2em  0.5em  0.8em  -2.5em;
+}
+
+
+/* inicio codigo menu hamburguesa */
+header img{
+    margin: 0.5rem;
+    float: left;
+    }
+    
+    header label{
+    float: right;
+    cursor: pointer;
+    }
+    
+    header label span{
+        display: block;
+        position: relative;
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        margin: 1.4rem 1rem;
+    }
+    
+    header label span::before, span::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: transform .3s ease-in-out;
+    }
+    header label span::before{
+    top:-5px;
+    }
+    
+    header label span::after{
+        bottom: -5px;
+    }
+    
+    header input{
+        display: none;
+    }
+    header nav{
+        clear: both;
+    }
+    
+    header nav ul{
+        background-color:#0000EC;
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+        transition: max-height 0.5s ease-in-out;
+    }
+    
+    nav ul li{
+        margin: 20px;
+        text-align: left;
+        color: white;
+        font-size: 16px;
+        transition: max-height 0.5s ease-in-out;
+    }
+    
+    
+    header input:checked ~ nav ul{
+        max-height: 240px;
+    }
+    header input:checked ~ label span{
+        background-color: transparent;
+    }
+    
+    header input:checked ~ label span::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    header input:checked ~ label span::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+/*cierre codigo menu hamburguesa */
+
+.container{
+    min-width: 99%;
+    max-width: 1000px;
+    margin: 0.1em auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.container > header,
+.container > footer,
+.container > main{
+    grid-column: 1/4;
+}
+
+main section, div, iframe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer div, h6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+i{
+    margin: 0.8em;
+}
+
+iframe{
+    height:15em;
+    width:15em;
+    border: transparent;
+    margin: 0%;
+    padding: 0%;
+}
+
+.section1_encabezado p, .section5_iconos img{
+    margin: 1.5em 0.5em 2em 0;
+}
+
+.section4_fotos img{
+    width: 320px;
+    height: 243px;
+}
+
+.parrafo{
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo p{
+    margin: 0 1em 2em 1em;
+}
+
+.box{
+    width: 250px;
+    height: 48px;
+    background-color:#00F3BB;
+}
+
+.boton{
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.boton:hover{
+    cursor: pointer;
+    color:white;
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    color:white;
+}
+
+.section6_novedades{
+    margin: 0%;
+    padding: 2em;
+    background-image: url("../assets/fondo2.svg");
+    background-repeat: no-repeat, repeat;
+    background-position-x: center;
+    background-size:30em;
+}
+
+
+.section2_episodios{
+    background-image: url("../assets/fondo.svg");
+    background-repeat: no-repeat, repeat;
+    background-position-x: center;
+    background-size:30em;
+    padding-top: 5em;
+    margin-top: 2em;
+}
+
+#img_phone{
+    margin-top: 7em;
+    margin-bottom: 0.5em;
+}
+
+#img_phone{
+    position: relative;
+    top: -3em;
+}
+
+#img_phone{
+    width: 300px;
+    height: 450px;
+}
+
+#btn_section1, #btn_section6{
+    text-align: center;
+}
+
+@media (min-width:700px){
+    /* menu escritorio*/
+    header label{
+        display: none;
+    }
+    header nav ul{
+        max-height: unset;
+        background-color: transparent;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header a{
+        color:#060A24;
+        text-decoration: none;
+    }
+    header a:hover{
+        color: #00F3BB;
+        text-decoration: line-through;
+        cursor: pointer;
+    }
+    header a:active{
+        color:rgba(6,10,36,0.56);
+        text-decoration: line-through;
+    }
+    header nav ul li{
+        display: inline-block;
+        margin: 1rem;
+    }
+    header img{
+        margin: 1em;
+        height: 36px;
+        width: 36px;
+        margin-left: 5em;
+        margin-top: 2em;
+    }
+
+    nav{
+        margin-right: 5em;
+        margin-top: 2em;
+    }
+    /* cierre menu escritorio */
+
+    .section2_episodios h2{
+        color:white;
+        padding: 1em;
+        margin: unset;
+        margin-left: 15%;
+    }
+    .container{
+        min-width: 99%;
+        max-width: 1440px;
+        margin: 0.1em auto;
+    
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    main section, div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .section1_encabezado{
+        width: 50%;
+        display: flex;
+        justify-content: left;
+        margin: 10% 0 -2% 15%;
+    }
+
+    main section .section5_iconos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section5_iconos img{
+        margin: 2%;
+        width: 12%;
+        height: 12%;
+    }
+
+    .section2_episodios{
+    margin-top: 5em;
+    padding-top:5em;
+    }
+
+    .episodios iframe{
+        height: 60%;
+        width: 35%;
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .section4_fotos img{
+        width: 30%;
+        height: 30%;
+    }
+
+    .parrafo p{ 
+        width: 50%;
+    }
+
+    main section h2{
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        margin-left: 15%; 
+    }
+
+    .section6_novedades{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em;
+    }
+
+    footer i .fab{
+        display: inline-block;
+        padding: 0%;
+        margin:0%;
+    }
+    
+    .section6_novedades{
+        margin: 0%;
+        padding: 5em;
+        background-image: url("../assets/fondo2.svg");
+        background-repeat: no-repeat, repeat;
+        background-position-x: center;
+        background-size:100em;
+        }
+
+    .section2_episodios{
+        background: unset;
+        background: url("../assets/fondo_1.svg");
+        background-repeat: no-repeat, repeat;
+        background-position-x: center;
+        }
+
+        #img_phone{
+            width: 300px;
+            height: 450px;
+        }
+
+        .parrafo p{
+            padding-top: 5em;
+        }
+}
